@@ -18,6 +18,9 @@ namespace ConvertDotToNode
         /***
          * 事前にDoxygen + Graphviz でメソッド呼び出しのdotファイルを出力しておく
          * dotファイル内のノード（Node）はメソッド
+         * 
+         * 第一引数：Doxygen + Graphvizの実行でdotファイルが出力されたフォルダ（例　C:\Work\Projects\ConsoleApp1\html\）
+         * 第二引数：csvファイルの出力先フォルダ（例　C:\tmp\hoge.csv）
          */
         static void Main(string[] args)
         {
@@ -123,7 +126,7 @@ namespace ConvertDotToNode
             }
 
             // CSV出力
-            WriteCsv(args[0] + "sample.csv", lines);
+            WriteCsv(args[1], lines);
 
             Console.ReadKey();
         }
